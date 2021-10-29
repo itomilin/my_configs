@@ -15,6 +15,7 @@ Config {
                 \|%ULLI%\
                 \|%coretemp%\
                 \|%battery%\
+                \*%bat_capacity%\
                 \|%memory%\
                 \|%date%\
                 \|%volume%\
@@ -124,5 +125,7 @@ Config {
 
         , Run Com "/bin/bash" [ "/home/tomilin/.xmonad/scripts/getUptime.sh"
                               ] "uptime1" 36000
+        , Run Com "/bin/bash" [ "/home/tomilin/.xmonad/scripts/battery_capacity.sh"
+                              ] "bat_capacity" 36000
         ]
    }
